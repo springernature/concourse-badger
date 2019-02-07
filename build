@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+[[ -d /var/halfpipe/shared-cache ]] && export GOPATH="/var/halfpipe/shared-cache"
+
+go build webserver.go
+
+echo "Finished. built ./webserver"

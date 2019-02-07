@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+set -a
+POSTGRES_USERNAME="${POSTGRES_USERNAME:-$(vault read -field=username_read springernature/engineering-enablement/concourse-db)}"
+POSTGRES_PASSWORD="${POSTGRES_PASSWORD:-$(vault read -field=password_read springernature/engineering-enablement/concourse-db)}"
+POSTGRES_HOST="${POSTGRES_HOST:-$(vault read -field=host springernature/engineering-enablement/concourse-db)}"
+
+docker-compose run --service-ports app go run webserver.go
