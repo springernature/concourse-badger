@@ -15,12 +15,15 @@ type Concourse struct {
 	PgUsername, PgPassword, PgHost string
 }
 
-func (c Concourse) PipelineStatus(team, pipeline string) (status string, err error) {
+func (c Concourse) PipelineStatus(team, pipeline string) (string, error) {
+	var status string
 	connStr := fmt.Sprintf("postgres://%s:%s@%s/concourse?sslmode=disable", c.PgUsername, c.PgPassword, c.PgHost)
 	db, err := sql.Open("postgres", connStr)
 	if err != nil {
-		return
+		return status, err
 	}
+
+	defer db.Close()
 
 	cql := fmt.Sprintf(`SELECT b.status
 FROM builds b
@@ -31,11 +34,7 @@ ORDER BY end_time DESC
 LIMIT 1`, team, pipeline)
 
 	err = db.QueryRow(cql).Scan(&status)
-	if err != nil {
-		return
-	}
-	err = db.Close()
-	return
+	return status, err
 }
 
 func main() {
