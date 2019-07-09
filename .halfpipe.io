@@ -1,7 +1,7 @@
 team: engineering-enablement
 pipeline: concourse-badger
-#slack_channel: "#halfpipe-team"
-
+cron_trigger: "0 3 * * *"
+ 
 feature_toggles:
 - update-pipeline
 
