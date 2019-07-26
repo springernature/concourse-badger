@@ -16,3 +16,4 @@ A little service that renders a pipeline status badge. It talks directly to the 
 ## Development
 
 `./build` and `./run` do what you might expect.
+
