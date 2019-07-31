@@ -7,11 +7,20 @@ A little service that renders a pipeline status badge. It talks directly to the 
 
 ## Usage
 
-`GET /<team-name>/<pipeline-name>`
+`GET /<team-name>/<pipeline-name>` returns SVG badge 
+
+markdown
+
+```markdown
+[![build status](http://badger.halfpipe.io/engineering-enablement/concourse-badger)](https://concourse.halfpipe.io/teams/engineering-enablement/pipelines/concourse-badger)
+```
+
+html
 
 ```html
-<a href="https://concourse.halfpipe.io/teams/engineering-enablement/pipelines/concourse-badger"><img src="http://badger.halfpipe.io/engineering-enablement/concourse-badger" title="badge"></a>
+<a href="https://concourse.halfpipe.io/teams/engineering-enablement/pipelines/concourse-badger"><img src="http://badger.halfpipe.io/engineering-enablement/concourse-badger" title="build status"></a>
 ```
+
 
 ## Development
 
