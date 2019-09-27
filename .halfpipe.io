@@ -1,6 +1,9 @@
 team: engineering-enablement
 pipeline: concourse-badger
-cron_trigger: "0 3 * * *"
+
+triggers:
+- type: timer
+  cron: "0 3 * * *"
  
 feature_toggles:
 - update-pipeline
