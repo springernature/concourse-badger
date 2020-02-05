@@ -1,6 +1,6 @@
 applications:
 - name: concourse-badger
-  memory: 150M
+  memory: 50M
   stack: cflinuxfs3
   instances: 2
   buildpack: https://github.com/cloudfoundry/binary-buildpack.git#v1.0.26
