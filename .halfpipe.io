@@ -4,7 +4,7 @@ pipeline: concourse-badger
 triggers:
 - type: timer
   cron: "0 3 * * *"
- 
+
 feature_toggles:
 - update-pipeline
 
@@ -19,6 +19,6 @@ tasks:
   space: halfpipe
   deploy_artifact: .
   vars:
-    POSTGRES_USERNAME: ((concourse-db.username_read))
-    POSTGRES_PASSWORD: ((concourse-db.password_read))
-    POSTGRES_HOST: ((concourse-db.host))
+    POSTGRES_USERNAME: ((halfpipe-concourse-db-prod.username_read))
+    POSTGRES_PASSWORD: ((halfpipe-concourse-db-prod.password_read))
+    POSTGRES_HOST: ((halfpipe-concourse-db-prod.host))
