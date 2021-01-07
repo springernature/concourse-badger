@@ -5,5 +5,5 @@ applications:
   instances: 2
   buildpack: https://github.com/cloudfoundry/binary-buildpack.git#v1.0.26
   routes:
-  - route: concourse-badger.springernature.app
+  - route: concourse-badger.public.springernature.app
   - route: badger.halfpipe.io
