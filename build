@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-[[ -d /var/halfpipe/shared-cache ]] && export GOPATH="/var/halfpipe/shared-cache"
+[[ -d /var/halfpipe/shared-cache ]] && export GOMODCACHE="/var/halfpipe/shared-cache/gomodcache"
 
 go build webserver.go
 
