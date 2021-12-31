@@ -30,7 +30,7 @@ FROM builds b
 INNER JOIN pipelines p ON p.id = b.pipeline_id
 INNER JOIN teams t ON t.id = b.team_id
 WHERE t.name = '%s' AND p.name = '%s' AND b.completed = TRUE
-ORDER BY end_time DESC
+ORDER BY end_time DESC NULLS LAST
 LIMIT 1`, team, pipeline)
 
 	err = db.QueryRow(cql).Scan(&status)
