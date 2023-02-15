@@ -7,6 +7,7 @@ triggers:
 
 feature_toggles:
 - update-pipeline
+- github-statuses
 
 tasks:
 - type: docker-compose
