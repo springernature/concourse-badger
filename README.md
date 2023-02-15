@@ -24,5 +24,4 @@ html
 
 ## Development
 
-`./build` and `./run` do what you might expect.
-
+`./build` and `./run`
