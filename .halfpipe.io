@@ -20,6 +20,6 @@ tasks:
   space: halfpipe
   deploy_artifact: .
   vars:
-    POSTGRES_USERNAME: ((halfpipe-concourse-db-pg13-prod.username_read))
-    POSTGRES_PASSWORD: ((halfpipe-concourse-db-pg13-prod.password_read))
-    POSTGRES_HOST: ((halfpipe-concourse-db-pg13-prod.host))
+    POSTGRES_USERNAME: ((halfpipe-concourse-db-pg13.username_read))
+    POSTGRES_PASSWORD: ((halfpipe-concourse-db-pg13.password_read))
+    POSTGRES_HOST: ((halfpipe-concourse-db-pg13.host))

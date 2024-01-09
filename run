@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 set -a
-POSTGRES_USERNAME="${POSTGRES_USERNAME:-$(vault kv get -field=username_read springernature/engineering-enablement/halfpipe-concourse-db-pg13-prod)}"
-POSTGRES_PASSWORD="${POSTGRES_PASSWORD:-$(vault kv get -field=password_read springernature/engineering-enablement/halfpipe-concourse-db-pg13-prod)}"
-POSTGRES_HOST="${POSTGRES_HOST:-$(vault kv get -field=host springernature/engineering-enablement/halfpipe-concourse-db-pg13-prod)}"
+POSTGRES_USERNAME="${POSTGRES_USERNAME:-$(vault kv get -field=username_read springernature/engineering-enablement/halfpipe-concourse-db-pg13)}"
+POSTGRES_PASSWORD="${POSTGRES_PASSWORD:-$(vault kv get -field=password_read springernature/engineering-enablement/halfpipe-concourse-db-pg13)}"
+POSTGRES_HOST="${POSTGRES_HOST:-$(vault kv get -field=host springernature/engineering-enablement/halfpipe-concourse-db-pg13)}"
 
 docker-compose run --service-ports app go run webserver.go
