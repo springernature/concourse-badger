@@ -3,6 +3,6 @@ set -euo pipefail
 
 [[ -d /var/halfpipe/shared-cache ]] && export GOMODCACHE="/var/halfpipe/shared-cache/gomodcache"
 
-go build webserver.go
+CGO_ENABLED=0 go build webserver.go
 
 echo "Finished. built ./webserver"
