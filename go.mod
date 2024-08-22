@@ -1,5 +1,5 @@
 module concourse-badger
 
-go 1.17
+go 1.23
 
 require github.com/lib/pq v1.10.9
