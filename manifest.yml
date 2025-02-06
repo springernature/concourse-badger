@@ -1,9 +1,9 @@
 applications:
-- name: concourse-badger
-  memory: 50M
-  stack: cflinuxfs3
-  instances: 2
-  buildpack: https://github.com/cloudfoundry/binary-buildpack.git#v1.1.13
-  routes:
-  - route: concourse-badger.public.springernature.app
-  - route: badger.halfpipe.io
+  - name: concourse-badger
+    memory: 50M
+    instances: 2
+    buildpacks:
+      - https://github.com/cloudfoundry/binary-buildpack.git#v1.1.15
+    routes:
+      - route: concourse-badger.public.springernature.app
+      - route: badger.halfpipe.io
