@@ -1,0 +1,17 @@
+version: 1
+component:
+  name: concourse-badger
+  description: Renders build status badges for Concourse pipelines
+  type: application_module
+  system: halfpipe
+  owner: engineering-enablement
+  language: go
+  lifecycle: core
+  tier: mission-critical
+  properties:
+    pipelines:
+      - concourse_engineering-enablement_concourse-badger_4266
+    cf_apps:
+      - cf_engineering-enablement_halfpipe_concourse-badger 
+ 
+
