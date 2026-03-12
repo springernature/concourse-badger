@@ -3,7 +3,7 @@ component:
   name: concourse-badger
   description: Renders build status badges for Concourse pipelines
   type: application_module
-  system: halfpipe
+  system: APPL-437
   owner: engineering-enablement
   language: go
   lifecycle: core
